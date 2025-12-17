@@ -1,14 +1,326 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { 
+  CreditCard, 
+  Smartphone, 
+  Download, 
+  Zap, 
+  Shield, 
+  Globe,
+  ArrowRight,
+  Check,
+  Sparkles
+} from "lucide-react";
 
-const Index = () => {
+const features = [
+  {
+    icon: Zap,
+    title: "Instant Sharing",
+    description: "One tap is all it takes. Share your professional profile instantly with NFC technology."
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile Optimized",
+    description: "Your digital card looks perfect on any device. Fast loading, responsive design."
+  },
+  {
+    icon: Download,
+    title: "VCF Download",
+    description: "Let contacts save your info directly to their phone with one-click VCF export."
+  },
+  {
+    icon: Shield,
+    title: "Secure & Private",
+    description: "Your data is protected. You control what information to share."
+  },
+  {
+    icon: Globe,
+    title: "Always Updated",
+    description: "Change your info anytime. Your card is always current, never outdated."
+  },
+  {
+    icon: Sparkles,
+    title: "Professional Design",
+    description: "Clean, modern layouts that make a lasting impression on every connection."
+  }
+];
+
+const steps = [
+  {
+    number: "01",
+    title: "Create Your Profile",
+    description: "Sign up and add your contact details, social links, and professional info."
+  },
+  {
+    number: "02",
+    title: "Get Your NFC Card",
+    description: "Order your custom NFC card linked to your unique profile URL."
+  },
+  {
+    number: "03",
+    title: "Tap & Connect",
+    description: "Simply tap your card to any smartphone. Your profile opens instantly."
+  }
+];
+
+const pricingPlans = [
+  {
+    name: "Starter",
+    price: "$19",
+    description: "Perfect for individuals",
+    features: [
+      "1 NFC business card",
+      "Digital profile page",
+      "VCF contact download",
+      "Basic customization",
+      "Email support"
+    ]
+  },
+  {
+    name: "Professional",
+    price: "$49",
+    description: "Best for professionals",
+    features: [
+      "3 NFC business cards",
+      "Premium profile design",
+      "Analytics dashboard",
+      "Custom branding",
+      "Priority support"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    description: "For teams & businesses",
+    features: [
+      "Unlimited NFC cards",
+      "Team management",
+      "Custom integrations",
+      "Dedicated account manager",
+      "SLA guarantee"
+    ]
+  }
+];
+
+export default function Index() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 md:py-32">
+          <div className="absolute inset-0 gradient-hero opacity-[0.02]" />
+          <div className="container relative">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium animate-fade-in">
+                <Sparkles className="h-4 w-4" />
+                The future of networking is here
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight animate-slide-up">
+                Your Business Card,
+                <br />
+                <span className="text-accent">Reimagined</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.1s" }}>
+                Share your professional identity with a single tap. NFC-powered digital business cards that make lasting impressions.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+                <Button variant="hero" size="xl" asChild>
+                  <Link to="/auth?mode=signup">
+                    Get Started Free
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="xl" asChild>
+                  <Link to="/profile/demo">
+                    View Demo Profile
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Hero Visual */}
+            <div className="mt-16 md:mt-24 relative animate-scale-in" style={{ animationDelay: "0.3s" }}>
+              <div className="max-w-lg mx-auto">
+                <div className="relative">
+                  {/* Card mockup */}
+                  <div className="aspect-[1.6/1] rounded-2xl gradient-hero p-6 shadow-xl">
+                    <div className="h-full flex flex-col justify-between">
+                      <div className="flex items-start justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
+                            <CreditCard className="h-6 w-6 text-primary-foreground" />
+                          </div>
+                          <div>
+                            <p className="text-primary-foreground/70 text-xs">TapCard</p>
+                            <p className="text-primary-foreground font-semibold">NFC Business Card</p>
+                          </div>
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                          <Zap className="h-4 w-4 text-accent-foreground" />
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-primary-foreground text-lg font-semibold">John Doe</p>
+                        <p className="text-primary-foreground/70 text-sm">Product Designer</p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Decorative elements */}
+                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl" />
+                  <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-20 md:py-32 bg-secondary/30">
+          <div className="container">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Everything you need to network smarter
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Powerful features designed for modern professionals
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {features.map((feature, index) => (
+                <div 
+                  key={feature.title}
+                  className="bg-card p-6 rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                    <feature.icon className="h-6 w-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section id="how-it-works" className="py-20 md:py-32">
+          <div className="container">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                How It Works
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Get started in three simple steps
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {steps.map((step, index) => (
+                <div key={step.number} className="relative text-center">
+                  <div className="text-6xl font-bold text-accent/10 mb-4">
+                    {step.number}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground text-sm">{step.description}</p>
+                  {index < steps.length - 1 && (
+                    <div className="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-border" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing" className="py-20 md:py-32 bg-secondary/30">
+          <div className="container">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Choose the plan that fits your needs
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {pricingPlans.map((plan) => (
+                <div 
+                  key={plan.name}
+                  className={`relative bg-card p-6 rounded-2xl ${
+                    plan.popular 
+                      ? 'shadow-xl ring-2 ring-accent' 
+                      : 'shadow-card'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold">
+                      Most Popular
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <h3 className="text-lg font-semibold mb-1">{plan.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-4xl font-bold">{plan.price}</span>
+                      {plan.price !== "Custom" && <span className="text-muted-foreground">/one-time</span>}
+                    </div>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2 text-sm">
+                        <Check className="h-4 w-4 text-accent flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button 
+                    variant={plan.popular ? "hero" : "outline"} 
+                    className="w-full"
+                    asChild
+                  >
+                    <Link to="/auth?mode=signup">
+                      {plan.price === "Custom" ? "Contact Sales" : "Get Started"}
+                    </Link>
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 md:py-32">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Ready to upgrade your networking?
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Join thousands of professionals who've made the switch to digital business cards.
+              </p>
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/auth?mode=signup">
+                  Create Your Card
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
-};
-
-export default Index;
+}
