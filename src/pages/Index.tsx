@@ -168,8 +168,8 @@ export default function Index() {
                         </div>
                       </div>
                       <div>
-                        <p className="text-primary-foreground text-lg font-semibold">John Doe</p>
-                        <p className="text-primary-foreground/70 text-sm">Product Designer</p>
+                        <p className="text-primary-foreground text-lg font-semibold">Tareq Dabaan</p>
+                        <p className="text-primary-foreground/70 text-sm">Software Engineer</p>
                       </div>
                     </div>
                   </div>
