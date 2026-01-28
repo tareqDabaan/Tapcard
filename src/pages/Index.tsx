@@ -65,45 +65,6 @@ const steps = [
   }
 ];
 
-const pricingPlans = [
-  {
-    name: "Starter",
-    price: "$19",
-    description: "Perfect for individuals",
-    features: [
-      "1 NFC business card",
-      "Digital profile page",
-      "VCF contact download",
-      "Basic customization",
-      "Email support"
-    ]
-  },
-  {
-    name: "Professional",
-    price: "$49",
-    description: "Best for professionals",
-    features: [
-      "3 NFC business cards",
-      "Premium profile design",
-      "Analytics dashboard",
-      "Custom branding",
-      "Priority support"
-    ],
-    popular: true
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    description: "For teams & businesses",
-    features: [
-      "Unlimited NFC cards",
-      "Team management",
-      "Custom integrations",
-      "Dedicated account manager",
-      "SLA guarantee"
-    ]
-  }
-];
 
 export default function Index() {
   return (
