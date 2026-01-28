@@ -4,18 +4,17 @@ import { CreditCard } from "lucide-react";
 
 // Demo profile data - in production this would come from database
 const demoProfile = {
-  firstName: "Sarah",
-  lastName: "Mitchell",
-  email: "sarah@example.com",
-  phone: "+1 (555) 123-4567",
-  company: "TechVentures Inc.",
-  position: "Senior Product Designer",
-  location: "San Francisco, CA",
-  linkedin: "https://linkedin.com/in/sarahmitchell",
-  instagram: "https://instagram.com/sarahdesigns",
-  twitter: "https://twitter.com/sarahm",
-  github: "https://github.com/sarahmitchell",
-  website: "https://sarahmitchell.design",
+  firstName: "Tareq",
+  lastName: "Dabaan",
+  email: "tareqdab2000@gmail.com",
+  phone: "+965 90956148",
+  company: "Tap Card.",
+  position: "CEO-Software Engineer",
+  location: "Kuwait",
+  linkedin: "https://www.linkedin.com/in/tareq-dabaan-647513225/",
+  instagram: "https://instagram.com/tareqdabaan",
+  github: "https://github.com/tareqDabaan",
+  website: "https://tareqdabaan.github.io/my_portfolio/",
   avatar: "",
 };
 
