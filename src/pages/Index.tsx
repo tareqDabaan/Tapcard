@@ -149,8 +149,7 @@ export default function Index() {
   <div className="container">
     <div className="flex items-end justify-between gap-4 mb-8">
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold">Friends Profiles</h2>
-        <p className="text-muted-foreground mt-1">Static profiles (no login needed).</p>
+        <h2 className="text-2xl md:text-3xl font-bold">Activated Users</h2>
       </div>
     </div>
 
