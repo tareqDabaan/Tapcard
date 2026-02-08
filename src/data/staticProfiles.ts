@@ -8,8 +8,8 @@ const avatar = (fileName: string) => `${import.meta.env.BASE_URL}avatars/${fileN
 
 export const staticProfiles: StaticProfile[] = [
   {
-    username: "Abdelrahman",
-    firstName: "Adbelrahman",
+    username: "Dr.Abdelrahman",
+    firstName: "Dr.Adbelrahman",
     lastName: "Elgamal",
     email: "abdelrahmanaljaml@gmail.com",
     phone: "+965 69054611",
