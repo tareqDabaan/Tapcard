@@ -13,6 +13,7 @@ export interface ContactInfo {
   facebook?: string;
   github?: string;
   avatar?: string;
+   whatsapp?: string;
 }
 
 export function generateVCF(contact: ContactInfo): string {
