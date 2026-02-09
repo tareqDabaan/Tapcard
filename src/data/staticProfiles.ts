@@ -13,6 +13,8 @@ export const staticProfiles: StaticProfile[] = [
     lastName: "El-Gaml",
     email: "abdelrahmanaljaml@gmail.com",
     phone: "+965 69054611",
+    whatsapp: "+96569054611",
+
     company: "Smart Life.",
     position: "Medical Representative",
     location: "Kuwait, Qibla, Block 5 Building 1 - First Floor",
