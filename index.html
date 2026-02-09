@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var p = params.get("p");
+    var q = params.get("q");
+    var h = params.get("h");
+
+    if (p !== null) {
+      var repo = "/Tapcard";
+      var path = decodeURIComponent(p || "/");
+      var search = decodeURIComponent(q || "");
+      var hash = decodeURIComponent(h || "");
+
+      // If q already includes "?" keep it; otherwise add it only if non-empty.
+      var searchPart =
+        search === "" ? "" : search.startsWith("?") ? search : "?" + search;
+
+      window.history.replaceState(null, "", repo + path + searchPart + hash);
+    }
+  })();
+</script>
+
     <meta name="description" content="Tap Card, one link all info." />
 <meta name="author" content="Tap Card" />
 
 <meta property="og:title" content="TapCard | Kuwait" />
 <meta property="og:description" content="Tap Card." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://tareqdabaan.github.io/TapCard/" />
-<meta property="og:image" content="https://tareqdabaan.github.io/TapCard/og-image.jpg" />
+<meta property="og:url" content="https://tareqdabaan.github.io/Tapcard/" />
+<meta property="og:image" content="https://tareqdabaan.github.io/Tapcard/og-image.jpg" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Tap Card | Kuwait" />
 <meta name="twitter:description" content="Tap the card to view all info." />
-<meta name="twitter:image" content="https://tareqdabaan.github.io/TapCard/og-image.jpg" />
+<meta name="twitter:image" content="https://tareqdabaan.github.io/Tapcard/og-image.jpg" />
 
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/QontaQLogo.png" />
+<link rel="icon" type="image/svg+xml" href="./QontaQLogo.png" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://tapcard.app" />
