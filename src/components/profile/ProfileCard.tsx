@@ -33,7 +33,10 @@ export function ProfileCard({ profile }: ProfileCardProps) {
     { icon: Github, url: profile.github, label: "GitHub" },
     { icon: Globe, url: profile.website, label: "Website" },
   ].filter(link => link.url);
-
+ 
+  const whatsappDigits = profile.whatsapp ? profile.whatsapp.replace(/\D/g, "") : "";
+  const whatsappUrl = whatsappDigits ? `https://wa.me/${whatsappDigits}` : "";
+  
   return (
     <div className="w-full max-w-md mx-auto">
       <div className="bg-card rounded-2xl shadow-card overflow-hidden animate-scale-in">
@@ -111,7 +114,24 @@ export function ProfileCard({ profile }: ProfileCardProps) {
                 </div>
               </a>
             )}
-
+            
+            {whatsappUrl && (
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-3 rounded-xl bg-secondary/50 hover:bg-secondary transition-colors"
+              >
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                  <MessageCircle className="h-5 w-5 text-accent" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs text-muted-foreground">WhatsApp</p>
+                  <p className="text-sm font-medium truncate">{profile.whatsapp}</p>
+                </div>
+              </a>
+            )}
+            
             {profile.location && (
               <div className="flex items-center gap-3 p-3 rounded-xl bg-secondary/50">
                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
