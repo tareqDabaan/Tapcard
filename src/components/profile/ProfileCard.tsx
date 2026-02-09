@@ -12,7 +12,8 @@ import {
   Linkedin,
   Instagram,
   Twitter,
-  Facebook
+  Facebook,
+  MessageCircle
 } from "lucide-react";
 
 interface ProfileCardProps {
