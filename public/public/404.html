@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // GitHub Pages SPA redirect
+      // Keeps the path and sends it to /Tapcard/ as a query so index.html can restore it.
+      (function () {
+        var l = window.location;
+        var repo = "/Tapcard";
+        var path = l.pathname;
+
+        // Remove the repo base from the path if present
+        if (path.indexOf(repo) === 0) path = path.slice(repo.length);
+
+        // Build redirect URL:
+        // /Tapcard/?p=<original-path>&q=<original-search>&h=<original-hash>
+        var redirect =
+          repo +
+          "/?p=" +
+          encodeURIComponent(path) +
+          "&q=" +
+          encodeURIComponent(l.search) +
+          "&h=" +
+          encodeURIComponent(l.hash);
+
+        l.replace(l.origin + redirect);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
