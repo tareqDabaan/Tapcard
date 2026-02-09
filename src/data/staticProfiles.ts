@@ -9,8 +9,8 @@ const avatar = (fileName: string) => `${import.meta.env.BASE_URL}avatars/${fileN
 export const staticProfiles: StaticProfile[] = [
   {
     username: "Dr.Abdelrahman",
-    firstName: "Dr.Adbelrahman",
-    lastName: "Elgamal",
+    firstName: "Dr.Abdelrahman",
+    lastName: "El-Gaml",
     email: "abdelrahmanaljaml@gmail.com",
     phone: "+965 69054611",
     company: "Smart Life.",
