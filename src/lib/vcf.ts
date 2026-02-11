@@ -12,6 +12,7 @@ export interface ContactInfo {
   twitter?: string;
   facebook?: string;
   github?: string;
+  socialLinks?: { label: string; url: string }[];
   avatar?: string;
    whatsapp?: string;
 }
