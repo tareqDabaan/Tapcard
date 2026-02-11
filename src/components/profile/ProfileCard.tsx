@@ -26,13 +26,20 @@ export function ProfileCard({ profile }: ProfileCardProps) {
   };
 
   const socialLinks = [
-    { icon: Linkedin, url: profile.linkedin, label: "LinkedIn" },
-    { icon: Instagram, url: profile.instagram, label: "Instagram" },
-    { icon: Twitter, url: profile.twitter, label: "X (Twitter)" },
-    { icon: Facebook, url: profile.facebook, label: "Facebook" },
-    { icon: Github, url: profile.github, label: "GitHub" },
-    { icon: Globe, url: profile.website, label: "Website" },
-  ].filter(link => link.url);
+  { icon: Linkedin, url: profile.linkedin, label: "LinkedIn" },
+  { icon: Instagram, url: profile.instagram, label: "Instagram" },
+  { icon: Twitter, url: profile.twitter, label: "X (Twitter)" },
+  { icon: Facebook, url: profile.facebook, label: "Facebook" },
+  { icon: Github, url: profile.github, label: "GitHub" },
+  { icon: Globe, url: profile.website, label: "Website" },
+
+  // extra links (can include a 2nd Instagram)
+  ...(profile.socialLinks ?? []).map((l) => ({
+    icon: l.type === "instagram" ? Instagram : Globe,
+    url: l.url,
+    label: l.label,
+  })),
+].filter((link) => !!link.url);
  
   const whatsappDigits = profile.whatsapp ? profile.whatsapp.replace(/\D/g, "") : "";
   const whatsappUrl = whatsappDigits ? `https://wa.me/${whatsappDigits}` : "";
