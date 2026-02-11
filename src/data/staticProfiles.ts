@@ -20,7 +20,7 @@ export const staticProfiles: StaticProfile[] = [
     location: "Kuwait, Qibla, Block 5 Building 1 - First Floor",
     instagram: "https://www.instagram.com/dr.aelgaml",
     socialLinks: [
-      { label: "Instagram (Business)", url: "https://www.instagram.com/smartlife.company" },
+      { type:"instagram", label: "Instagram (Business)", url: "https://www.instagram.com/smartlife.company" },
     ],
     linkedin: "https://www.linkedin.com/in/abdelrahman-elgaml-285a36255/",
     avatar: avatar("abdelrahman.png "),
