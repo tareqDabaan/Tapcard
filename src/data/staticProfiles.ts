@@ -40,7 +40,7 @@ export const staticProfiles: StaticProfile[] = [
     // socialLinks: [
     //   { type:"instagram", label: "Instagram (Business)", url: "https://www.instagram.com/smartlife.company" },
     // ],
-    avatar: avatar("abdelrahman.png "),
+    avatar: avatar("abdullahenawi.png "),
   }
 ];
 
