@@ -24,6 +24,23 @@ export const staticProfiles: StaticProfile[] = [
     ],
     linkedin: "https://www.linkedin.com/in/abdelrahman-elgaml-285a36255/",
     avatar: avatar("abdelrahman.png "),
+  },
+  {
+    username: "Abdullah Enawi",
+    firstName: "Abdullah",
+    lastName: "Enawi",
+    email: "abdullah.omar.enawi@gmail.com",
+    phone: "+965 60616836",
+    whatsapp: "+96560616836",
+
+    // company: "Smart Life.",
+    position: "Promoter",
+    location: "Kuwait, Kuwait City",
+    instagram: "https://www.instagram.com/aboodi_enawi",
+    // socialLinks: [
+    //   { type:"instagram", label: "Instagram (Business)", url: "https://www.instagram.com/smartlife.company" },
+    // ],
+    avatar: avatar("abdelrahman.png "),
   }
 ];
 
