@@ -26,7 +26,7 @@ export const staticProfiles: StaticProfile[] = [
     avatar: avatar("abdelrahman.png "),
   },
   {
-    username: "Abdullah Enawi",
+    username: "AbdullahEnawi",
     firstName: "Abdullah",
     lastName: "Enawi",
     email: "abdullah.omar.enawi@gmail.com",
@@ -40,7 +40,7 @@ export const staticProfiles: StaticProfile[] = [
     // socialLinks: [
     //   { type:"instagram", label: "Instagram (Business)", url: "https://www.instagram.com/smartlife.company" },
     // ],
-    avatar: avatar("abdullahenawi.png "),
+    avatar: avatar("abdullahenawi.jpg"),
   }
 ];
 
