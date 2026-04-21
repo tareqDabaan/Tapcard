@@ -56,8 +56,6 @@ export const staticProfiles: StaticProfile[] = [
   instagram: "https://www.instagram.com/toothfairy_katie",
   linkedin: "https://www.linkedin.com/in/catherine-arguelles-rdh-197886a1",
   socialLinks: [
-    { type: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/catherine-arguelles-rdh-197886a1" },
-    { type: "instagram", label: "Instagram", url: "https://www.instagram.com/toothfairy_katie" },
     { type: "email", label: "Work Email", url: "mailto:c.arguelles@naelalhazeem.com" },
     { type: "email", label: "Trainer Email", url: "mailto:SDATrainer_catRDH@outlook.com" },
   ],
