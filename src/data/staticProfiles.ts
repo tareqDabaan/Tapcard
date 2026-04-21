@@ -41,7 +41,28 @@ export const staticProfiles: StaticProfile[] = [
     //   { type:"instagram", label: "Instagram (Business)", url: "https://www.instagram.com/smartlife.company" },
     // ],
     avatar: avatar("abdullahenawi.jpg "),
-  }
+  },
+  {
+  username: "CatherineArguelles",
+  firstName: "Catherine",
+  lastName: "Arguelles",
+  email: "SDATrainer_catRDH@outlook.com",
+  phone: "+965 51662646",
+  whatsapp: "+96551662646",
+
+  company: "Swiss Dental Academy (SDA) / Dr. Nael Alhazeem Dental Center",
+  position: "Registered Dental Hygienist (RDH) | SDA GBT Trainer | GBT Clinician",
+  location: "Kuwait (Al-Tijaria Tower) / Nyon, Switzerland",
+  instagram: "https://www.instagram.com/toothfairy_katie",
+  linkedin: "https://www.linkedin.com/in/catherine-arguelles-rdh-197886a1",
+  socialLinks: [
+    { type: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/catherine-arguelles-rdh-197886a1" },
+    { type: "instagram", label: "Instagram", url: "https://www.instagram.com/toothfairy_katie" },
+    { type: "email", label: "Work Email", url: "mailto:c.arguelles@naelalhazeem.com" },
+    { type: "email", label: "Trainer Email", url: "mailto:SDATrainer_catRDH@outlook.com" },
+  ],
+  avatar: avatar("IMG_1795.jpeg"),
+}
 ];
 
 // Helpful lookup by username
